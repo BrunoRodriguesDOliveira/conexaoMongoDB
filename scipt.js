@@ -90,21 +90,6 @@ function construirDocumento(){
 //--- Lógica de geração (json e PDF) ---
 // Evento para gerar o documento JSON no formato MongoDB
 
-form.addEventListener("submit", e => {
-    e.preventDefault();
-    const documento = construirDocumento();
-
-    //Cria uma cópia do objeto para formatar as datas para mongoDb
-    const documentoMongo = JSON.parse(JSON.stringify(documento));
-    documentoMongo.data_envio = {"$data": documento.data_envio};
-    documentoMongo.revioes.forEach(rev => {
-        rev.data = {"$date": rev.data};
-    });
-    //Exibe o JSON formatado na tela
-
-    output.textContent = JSON.stringify(documentoMongo,null,2);
-
-});
 
 //Evento para o botão de gerar o relatório em pdf
 gerarPdfBtn.addEventListener("click",() => {
