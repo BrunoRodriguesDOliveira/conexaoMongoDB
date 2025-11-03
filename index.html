@@ -8,30 +8,31 @@
 </head>
 <body>
     <h1>Relatório de Atividades</h1>
-
-    <form id="documentoForm">
+    
+    <form id="documentForm">
         <fieldset>
             <legend>Informações Gerais</legend>
             <label>Título:</label>
-            <input type="text" id="titutlo" required>
+            <input type="text" id="titulo" required>
 
             <label>Tipo:</label>
             <select id="tipo">
                 <option value="Relatório">Relatório</option>
                 <option value="Planejamento">Planejamento</option>
             </select>
+
             <label>Ano:</label>
             <input type="number" id="ano" min="1900" max="2100" required>
-            
-            <label">Status:</label>
 
+            <label>Status:</label>
+            
             <select id="status">
                 <option value="Aprovado">Aprovado</option>
-                <option value="Em Revisão">Em Revisão</option>
-                <option value="Cancelado">Cancelado</option>
+                <option value="Em revisão">Em revisão</option>
+                <option value="Cancelado">Cancelado</option>    
             </select>
 
-            <label> Data de Envio:</label>
+            <label>Data de Envio:</label>
             <input type="datetime-local" id="data_envio" required>
         </fieldset>
 
@@ -41,17 +42,19 @@
             <input type="text" id="nome_responsavel" required>
 
             <label>Cargo:</label>
-                <input type="text" id="cargo_responsavel" required>
+            <input type="text" id="cargo_responsavel"  required>
 
-            <label>Departamento: </label>
-                <input type="text" id="departamento_responsavel" required>
+            <label>Departamento:</label>
+            <input type="text" id="departamento_responsavel" required>
         </fieldset>
 
-
+        <!-- fieldset>legend/input#palavra_input/ul#lista_palavras -->
         <fieldset>
-            <legend>Palavras Chave</legend>
+            <legend>Palavras Chaves</legend>
             <input type="text" id="palavra_input" placeholder="Digite e pressione Enter">
-            <ul id="lista_palavras"></ul>
+            <ul id="lista_palavras">
+
+            </ul>
         </fieldset>
 
         <fieldset>
@@ -60,16 +63,18 @@
             <button id="addRevisao">+ Adicionar Revisão</button>
         </fieldset>
 
-
-
+        <!-- div.botoes-container>button:submit.gerarBtn/button:button#gerarPdfBtn.pdfBtn -->
+        
         <div class="botoes-container">
             <button type="submit" class="gerarBtn">Gerar Documento</button>
             <button type="button" id="gerarPdfBtn" class="pdfBtn">Gerar PDF</button>
         </div>
     </form>
 
+    <!-- div.header-container>h1/button:button#copyJsonBtn.copy-btn -->
+    
     <div class="header-container">
-        <h2>Documento Gerador</h2>
+        <h2>Documento Gerado</h2>
         <button type="button" id="copyJsonBtn" class="copy-btn">Copiar JSON</button>
     </div>
     <pre id="jsonOutput"></pre>

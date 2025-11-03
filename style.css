@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppin:wght@300;400;600&display=swap');
+/* style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -8,7 +9,6 @@ body{
     max-width: 800px;
     margin: auto;
 }
-
 
 h1{
     text-align: center;
@@ -42,12 +42,12 @@ label{
 }
 
 input, select{
-    width: 100%;
+    width:100%;
     padding: 10px;
     border: 1px solid #bbb;
     border-radius: 8px;
     margin-top: 5px;
-    box-sizing: border-box; /*Adicione esta linha para corrigir o alinhamento */
+    box-sizing:border-box; /* Adicione esta linha para corrigir o alinhamento */
 }
 
 #lista_palavras{
@@ -138,9 +138,9 @@ input, select{
     padding: 8px 15px;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Popins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
-    transition: background-color 0,3s;
+    transition: background-color 0.3s;
 }
 
 .copy-btn:hover{
@@ -153,18 +153,17 @@ input, select{
 }
 
 .pdfBtn{
-     width: 100%;
-     padding: 12px;
-     font-size: 1rem;
-     background: #ef4444;
-     color: white;
-     border: none;
-     border-radius: 10px;
-     cursor: pointer;
-     transition: 0.3s;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-;pdfBtn:hover{
+.pdfBtn:hover{
     background: #dc2626;
-
 }
